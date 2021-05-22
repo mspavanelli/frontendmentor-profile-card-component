@@ -21,6 +21,27 @@ body {
   display: grid;
   place-items: center;
   background-color: #19a2ae;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  background: url(../images/bg-pattern-top.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 100%;
+  width: 50vw;
+  top: -50%;
+  left: 0;
+}
+body::after {
+  content: "";
+  background: url(../images/bg-pattern-bottom.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 50rem;
+  width: 70vw;
+  top: 50%;
+  right: -20rem;
 }
 
 .card header {
@@ -69,13 +90,13 @@ body {
 }
 
 .card {
-  background-color: white;
-  background-image: url(../images/bg-pattern-card.svg);
-  background-repeat: no-repeat;
+  background: white url(../images/bg-pattern-card.svg) no-repeat;
+  background-size: contain;
   border-radius: 10px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   width: 90%;
   max-width: 22rem;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
